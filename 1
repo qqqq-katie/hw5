@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+sample_size = 10000000
+
+xi = np.random.randint(low = 1, high = 10, size = sample_size)
+eta = np.random.randint(low = 7, high = 13, size = sample_size)
+#sum2 = np.random.randint(low = 1, high = 26, size = sample_size)
+
+sum1 = xi + eta
+plt.hist(sum1, bins=np.arange(5, 25), label="xi + eta", color = 'tomato', alpha=0.4, density=True)
+#plt.hist(sum2, bins=np.arange(28), label="Randint", alpha=0.3, density=True)
+plt.xlabel("Value")
+plt.ylabel("Probability")
+plt.legend()
+plt.show()
